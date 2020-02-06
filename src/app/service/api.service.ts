@@ -19,19 +19,19 @@ export class ApiService {
     return this.http.get(`${this.baseListUri}`);
   }
 
+  // Retornar todos os repositórios
+  getRepoUser(urlRepo) {
+    return this.http.get(`${urlRepo}`);
+  }
 
-  // Error handling 
-  errorMgmt(error: HttpErrorResponse) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
-      // Get client-side error
-      errorMessage = error.error.message;
-    } else {
-      // Get server-side error
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-    }
-    console.log(errorMessage);
-    return throwError(errorMessage);
+  // Retornar todos os seguidores
+  getFollUser(urlFoll) {
+    return this.http.get(`${urlFoll}`);
+  }
+
+  // Retornar os dados de inscrição, para retornar a data de criação da conta
+  getCreatedDateUser(urlDate) {
+    return this.http.get(`${urlDate}`);
   }
 
 }
