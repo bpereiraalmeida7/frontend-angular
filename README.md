@@ -1,4 +1,4 @@
-# Frontend para requisições API do GitHub.
+# Frontend para requisições HTTP da API do GitHub.
 
 Este sistema tem como objetivo, listar usuários do GitHub, e detalhar algumas informações dos mesmos, ao ser clicado, assim como filtrar por 'login'. 
 
