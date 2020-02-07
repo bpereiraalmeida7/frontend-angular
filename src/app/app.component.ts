@@ -14,6 +14,7 @@ export class AppComponent {
   qtdRepo: any = 0;
   qtdFoll: any = 0;
   cDate: any = null;
+  search: any = '';
 
   constructor(private apiService: ApiService) {}
 
@@ -47,6 +48,13 @@ export class AppComponent {
       this.qtdRepo = data;
       this.qtdRepo = this.qtdRepo.length;
     })    
+  }
+
+  searchUser(param){
+    /* this.listUser = this.listUser.filter(function(e) {
+      return param == e.login;
+    }); */
+    console.log(param)
   }
 
   followersList(url){
